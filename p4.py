@@ -11,11 +11,9 @@ crew = [
 ]
 @app.get("/crew")
 def home():
-    return [
-        {"message":"Succes"},
-        {"data":crew}
+    return {"message":"Succes","data":crew}
         
-    ]
+    
         
 
 if __name__=="__main__":
