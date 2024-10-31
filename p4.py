@@ -11,7 +11,12 @@ crew = [
 ]
 @app.get("/crew")
 def home():
-    return {"coo":crew}
+    return [
+        {"message":"Succes"},
+        {"data":crew}
+        
+    ]
+        
 
 if __name__=="__main__":
     uvicorn.run(app,host="127.0.0.1",port=8001)
