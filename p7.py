@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-#deux path parameter 
+#deux query parameter 
 app = FastAPI()
 crew = [
     {"id": 1, "name": "Cosmo", "role": "Captain"},
@@ -8,7 +8,7 @@ crew = [
     {"id": 3, "name": "Bob", "role": "Scientist"}
 ]
 
-@app.get("/crew_path/{crew_id}/{role}")
+@app.get("/crew_query/member")
 def read_crew_member_by_path(crew_id: int, role: str):
     for member in crew:
         if member["id"] == crew_id and member["role"].upper() == role.upper():
