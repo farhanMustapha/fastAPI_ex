@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
-import asyncio
+import asyncio #permet de creer un decalage de temps
+
 app = FastAPI()
 #data base
 crew = [
@@ -10,7 +11,7 @@ crew = [
 ]
 
 @app.get("/crew_query/member")
-async def read_crew_member_by_path(crew_id: int, role: str):
+async def read_crew_member_by_path(crew_id: int, role: str): #async permet d'executer des operation en parallel
     #ici permet au fonction de aller faire autre chose sans bloquer l'app
     await asyncio.sleep(3)
     for member in crew:
