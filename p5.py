@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
 
-
 app=FastAPI()
 crew = [
     {"id": 1, "name": "Cosmo", "role": "Captain"},
@@ -15,8 +14,6 @@ def read_crew_member_by_path(crew_id:int): # fonction fait le traitement a la ba
         if member["id"]==crew_id:
             return member
     return {"msg " : "member not found"}
-
-
 
 if __name__=="__main__":
     uvicorn.run(app,host="127.0.0.1",port=8000)
