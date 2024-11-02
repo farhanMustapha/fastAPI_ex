@@ -22,7 +22,7 @@ async def update_crew(crew_id:int,request:Request):
                 "crew_id":crew_id,
                 "member":member
             }
-        return {
+    return {
             "msg":"not found"
         }
 
