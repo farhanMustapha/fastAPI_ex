@@ -33,7 +33,10 @@ async def add_crew_member(request:Request): # je suis le serveur je vais recevoi
     new_member={"id":crew_id,"name":name,"role":role}
     crew.append(new_member)
 
+    msg=f"Welcome to the crew {name}!"
+
     return {
+        "msg":msg,
         "crew_id":crew_id,"new_member":new_member
         }
 
